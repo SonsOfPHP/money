@@ -1,26 +1,4 @@
-* text=auto eol=lf
-
-*.conf text eol=lf
-*.html text eol=lf
-*.ico binary
-*.ini text eol=lf
-*.js text eol=lf
-*.json text eol=lf
-*.md text eol=lf
-*.php text eol=lf
-*.png binary
-*.sh text eol=lf
-*.yaml text eol=lf
-*.yml text eol=lf
-
-/.github export-ignore
-/docs export-ignore
-/tools export-ignore
+/Tests export-ignore
+/phpunit.xml.dist export-ignore
 /.gitattributes export-ignore
 /.gitignore export-ignore
-/.php-cs-fixer.dist.php export-ignore
-/Makefile export-ignore
-/bard.json export-ignore
-/phpunit.xml.dist export-ignore
-/psalm-baseline.xml export-ignore
-/psalm.xml export-ignore

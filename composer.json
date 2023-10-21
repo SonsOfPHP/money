@@ -1,14 +1,14 @@
 {
-    "name": "sonsofphp/sonsofphp",
+    "name": "sonsofphp/money",
     "type": "library",
-    "description": "Sons of PHP Mother Repo",
-    "minimum-stability": "dev",
+    "description": "Provides abstraction for projects working with money inspired by JSR 354",
     "keywords": [
-        "php",
-        "sons of php",
-        "mother repo"
+        "money",
+        "currency",
+        "ISO4217",
+        "jsr-354"
     ],
-    "homepage": "https://github.com/SonsOfPHP",
+    "homepage": "https://github.com/SonsOfPHP/money",
     "license": "MIT",
     "authors": [
         {
@@ -22,6 +22,25 @@
         "docs": "https://docs.sonsofphp.com",
         "chat": "https://discord.gg/sdVxNhFqND"
     },
+    "autoload": {
+        "psr-4": {
+            "SonsOfPHP\\Component\\Money\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.1"
+    },
+    "extra": {
+        "sort-packages": true,
+        "branch-alias": {
+            "dev-main": "0.3.x-dev"
+        }
+    },
     "funding": [
         {
             "type": "github",
@@ -31,91 +50,5 @@
             "type": "tidelift",
             "url": "https://tidelift.com/subscription/pkg/packagist-sonsofphp-sonsofphp"
         }
-    ],
-    "provide": {
-        "psr/event-dispatcher-implementation": "1.0",
-        "psr/clock-implementation": "1.0"
-    },
-    "require": {
-        "php": ">=8.1",
-        "ext-json": "*",
-        "psr/event-dispatcher": "^1.0",
-        "doctrine/dbal": "^3",
-        "symfony/options-resolver": "^5|^6",
-        "symfony/uid": "^5|^6",
-        "symfony/console": "^4|^5|^6",
-        "symfony/dotenv": "^5|^6",
-        "symfony/finder": "^5|^6",
-        "symfony/process": "^5|^6",
-        "symfony/dependency-injection": "^5|^6",
-        "symfony/http-kernel": "^5|^6",
-        "symfony/security-bundle": "^6",
-        "symfony/messenger": "^5|^6"
-    },
-    "replace": {
-        "sonsofphp/bard": "self.version",
-        "sonsofphp/clock": "self.version",
-        "sonsofphp/cqrs": "self.version",
-        "sonsofphp/cqrs-symfony": "self.version",
-        "sonsofphp/event-dispatcher": "self.version",
-        "sonsofphp/event-sourcing": "self.version",
-        "sonsofphp/event-sourcing-doctrine": "self.version",
-        "sonsofphp/event-sourcing-symfony": "self.version",
-        "sonsofphp/feature-toggle": "self.version",
-        "sonsofphp/json": "self.version",
-        "sonsofphp/money": "self.version",
-        "sonsofphp/version": "self.version",
-        "sonsofphp/cqrs-bundle": "self.version"
-    },
-    "autoload": {
-        "psr-4": {
-            "SonsOfPHP\\Bard\\": "packages/bard/src",
-            "SonsOfPHP\\Component\\Clock\\": "packages/clock",
-            "SonsOfPHP\\Component\\Cqrs\\": "packages/cqrs",
-            "SonsOfPHP\\Bundle\\Cqrs\\": "packages/cqrs-bundle",
-            "SonsOfPHP\\Bridge\\Symfony\\Cqrs\\": "packages/cqrs-symfony",
-            "SonsOfPHP\\Component\\EventDispatcher\\": "packages/event-dispatcher",
-            "SonsOfPHP\\Component\\EventSourcing\\": "packages/event-sourcing",
-            "SonsOfPHP\\Bridge\\Doctrine\\EventSourcing\\": "packages/event-sourcing-doctrine",
-            "SonsOfPHP\\Bridge\\Symfony\\EventSourcing\\": "packages/event-sourcing-symfony",
-            "SonsOfPHP\\Component\\FeatureToggle\\": "packages/feature-toggle",
-            "SonsOfPHP\\Component\\Json\\": "packages/json",
-            "SonsOfPHP\\Component\\Money\\": "packages/money",
-            "SonsOfPHP\\Component\\Version\\": "packages/version"
-        },
-        "exclude-from-classmap": [
-            "packages/bard/Tests",
-            "packages/clock/Tests",
-            "packages/cqrs/Tests",
-            "packages/cqrs-bundle/Tests",
-            "packages/cqrs-symfony/Tests",
-            "packages/event-dispatcher/Tests",
-            "packages/event-sourcing/Tests",
-            "packages/event-sourcing-doctrine/Tests",
-            "packages/event-sourcing-symfony/Tests",
-            "packages/feature-toggle/Tests",
-            "packages/json/Tests",
-            "packages/money/Tests",
-            "packages/version/Tests"
-        ]
-    },
-    "extra": {
-        "sort-packages": true,
-        "branch-alias": {
-            "dev-main": "0.3.x-dev"
-        }
-    },
-    "require-dev": {
-        "symfony/http-foundation": "^5|^6",
-        "symfony/serializer": "^5|^6",
-        "symfony/phpunit-bridge": "^6",
-        "symfony/error-handler": "^6"
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "SonsOfPHP\\Bard\\Tests\\": "packages/bard/Tests",
-            "SonsOfPHP\\Bundle\\Cqrs\\Tests\\": "packages/cqrs-bundle/Tests",
-            "SonsOfPHP\\Bridge\\Symfony\\Cqrs\\Tests\\": "packages/cqrs-symfony/Tests"
-        }
-    }
+    ]
 }
